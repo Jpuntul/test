@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "esnext",
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/admin/users/page.jsx",
+    "src/app/dashboard/page.jsx",
+    "src/__test__/tests/AdminUsers.test.jsx",
+    "src/app/admin/updateUser/[id]/page.tsx",
+    "src/components/dashboard/nav.tsx",
+    "src/app/admin/reservations/page.jsx",
+    "src/app/page.tsx",
+    "src/__test__/tests/CreateUserForm.test.jsx",
+    "src/__test__/tests/CreateVehicleForm.test.jsx",
+    "src/__test__/tests/UpdateUserForm.jsx",
+    "src/__test__/tests/UpdateVehicleForm.test.jsx",
+    "src/app/login/page.jsx",
+
+    "src/__test__/tests/VehicleCard.test.jsx",
+    "src/components/rentalagreement.jsx",
+    "src/components/user/checkinForm.jsx",
+    "src/app/admin/checkin/[reservationId]/page.jsx",
+    "src/app/rentalagreement/[reservationId]/page.jsx",
+    "src/components/dashboard/reservationCard.jsx",
+    "src/app/admin/updateReservation/[id]/page.tsx",
+    "src/components/rentalagreementForm.jsx"
+, "src/app/reservation/[vehicleId]/page.jsx", "src/components/reservation-form.jsx", "src/__test__/tests/ViewReservation.test.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
