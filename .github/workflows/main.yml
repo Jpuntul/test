@@ -77,14 +77,15 @@ jobs:
       - name: Run Tests
         run: npx jest
 
-  qodana:
+  sonarcloud:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@v2023.3
+      - name: 'SonarCloud Scan'
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          QODANA_TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdhbml6YXRpb24iOiIzQkRyZyIsInByb2plY3QiOiJBR1ZlciIsInRva2VuIjoiM1h5OFYifQ.MPbaTQ9GiCgyVIyRdjtWFAr2yydiM6H8u1IHFE8pIFE
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONARCLOUD_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
