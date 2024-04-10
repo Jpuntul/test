@@ -96,7 +96,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=your_project_key
-            -Dsonar.organization=your_organization_key
+            -Dsonar.projectKey=Jpuntul_test
+            -Dsonar.organization=jpuntul
             -Dsonar.projectName=test
             -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
