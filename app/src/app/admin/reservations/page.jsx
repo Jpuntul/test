@@ -4,8 +4,6 @@ import {
   CarIcon,
   File,
   Search,
-  Send,
-  Settings,
   UsersRound,
 } from "lucide-react";
 
@@ -22,7 +20,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import ReservationList from "@/components/dashboard/reservation";
-
+import CreateReservationForm from "@/components/dashboard/createReservationForm";
 
 export default function Reservations({
   defaultLayout = [265, 440, 655],
@@ -91,17 +89,6 @@ export default function Reservations({
           </div>
           <Separator />
           <div className="mt-4 h-full">
-          {/*<Nav
-            isCollapsed={isCollapsed}
-            links={[
-              {
-                title: "Settings",
-                icon: Settings,
-                variant: "ghost",
-                url : "/admin/settings",
-              },
-            ]}
-          />*/}
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
@@ -138,7 +125,7 @@ export default function Reservations({
               <ReservationList />
             </TabsContent>
             <TabsContent value="unread" className="m-0">
-              <div className="bg-primary">Something</div>
+              <CreateReservationForm/>
             </TabsContent>
           </Tabs>
         </ResizablePanel>

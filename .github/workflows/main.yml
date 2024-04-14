@@ -18,8 +18,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-
-  
 jobs:
   # Build job
   build:
@@ -30,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -84,8 +84,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
         with:
-          args: >
+          args: |
             -Dsonar.projectKey=Jpuntul_test
             -Dsonar.organization=jpuntul
             -Dsonar.projectName=test
             -Dsonar.javascript.lcov.reportPaths=./app/coverage/lcov.info
+            -Dsonar.exclusions=./app/**/*test*.jsx,./app/src/__mocks__/*.*,./app/src/interfaces/*.*,./app/src/models/*.*,./app/src/lib/*.*,./app/src/styles/*.*,./app/src/utils/*.*,./app/*.*
+

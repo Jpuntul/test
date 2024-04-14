@@ -1,7 +1,6 @@
 import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-import CheckinForm from '@/components/dashboard/checkinForm';
-import { useRouter } from 'next/navigation';
+import { render, fireEvent, screen } from '@testing-library/react';
+import CheckinForm from '@/components/user/checkinForm';
 
 global.alert = jest.fn();
 
