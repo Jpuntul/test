@@ -89,3 +89,4 @@ jobs:
             -Dsonar.organization=jpuntul
             -Dsonar.projectName=test
             -Dsonar.javascript.lcov.reportPaths=./app/coverage/lcov.info
+            -Dsonar.exclusions=./app/**/*test*.jsx
