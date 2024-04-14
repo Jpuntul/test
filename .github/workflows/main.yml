@@ -89,13 +89,13 @@ jobs:
             -Dsonar.organization=shamiivan
             -Dsonar.projectName=The-Night-Owlers-soen341ProjectW2024
             -Dsonar.javascript.lcov.reportPaths=./app/coverage/lcov.info
-            -Dsonar.coverage.exclusions=
-              ./app/**/*test*.jsx
-              ./app/src/__mocks__/*.*
-              ./app/src/interfaces/*.*
-              ./app/src/models/*.*
-              ./app/src/lib/*.*
-              ./app/src/styles/*.*
-              ./app/src/utils/*.*
-              ./app/*.*
+            -Dsonar.exclusions=
+              ./**/*test*.jsx
+              ./src/__mocks__/*.*
+              ./src/interfaces/*.*
+              ./src/models/*.*
+              ./src/lib/*.*
+              ./src/styles/*.*
+              ./src/utils/*.*
+              ./*.*
 
