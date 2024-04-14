@@ -38,7 +38,7 @@ export function ChatbotComponent() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send reques");
+        throw new Error("Failed to send request");
       }
 
 
